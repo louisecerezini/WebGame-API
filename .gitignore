@@ -1,0 +1,30 @@
+# .NET
+bin/
+obj/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.dbmdl
+*.log
+*.vs/
+TestResults/
+*.nupkg
+*.snk
+*.pdb
+*.cache
+*.ide
+*.dll
+*.exe
+*.app
+*.so
+*.dylib
+*.pyc
+*.DS_Store
+
+# Rider
+.idea/
+*.sln.iml
+
+# Visual Studio Code
+.vscode/
