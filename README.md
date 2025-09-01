@@ -8,6 +8,28 @@ A simple .NET Web API project (targeting .NET 9) with xUnit tests and GitHub Act
 - xUnit test project with a sample test
 - GitHub Actions workflow to run tests on every PR to `main`
 
+
+### Running with Docker
+
+#### Build the Docker image
+```bash
+docker build -t webgameapi-debug .
+```
+
+#### Run the container
+```bash
+docker run -d -p 8080:8080 -p 5005:5005 --name webgameapi-debug webgameapi-debug
+```
+
+The API will be available at `http://localhost:8080/api/sample/hello`.
+
+To stop and remove the container:
+```bash
+docker stop webgameapi-debug && docker rm webgameapi-debug
+```
+
+---
+
 ### Getting Started
 
 #### Prerequisites
@@ -15,13 +37,10 @@ A simple .NET Web API project (targeting .NET 9) with xUnit tests and GitHub Act
 
 #### Build and Run
 ```bash
-# Restore dependencies
 dotnet restore
 
-# Build the solution
 dotnet build
 
-# Run the API
 dotnet run --project WebGameApi
 ```
 

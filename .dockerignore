@@ -1,0 +1,13 @@
+bin/
+obj/
+WebGameApi/bin/
+WebGameApi/obj/
+WebGameApi.Tests/bin/
+WebGameApi.Tests/obj/
+bin/
+obj/
+*.user
+*.vs
+*.suo
+*.userosscache
+*.sln.docstates
