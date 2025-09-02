@@ -116,7 +116,7 @@ Resources:
   WebGameApiTaskDefinition:
     Type: AWS::ECS::TaskDefinition
     Properties:
-      Family: webgameapi-task
+      Family: webgame-api
       Cpu: 512
       Memory: 1024
       NetworkMode: awsvpc
@@ -124,10 +124,10 @@ Resources:
         - FARGATE
       ExecutionRoleArn: !GetAtt TaskExecutionRole.Arn
       ContainerDefinitions:
-        - Name: webgameapi
-          Image: <YOUR_ECR_IMAGE_URI>
+        - Name: webgame-api
+          Image: 266174776500.dkr.ecr.us-east-1.amazonaws.com/webgame-api:4cb4cd6
           PortMappings:
-            - ContainerPort: 80
+            - ContainerPort: 8080
           LogConfiguration:
             LogDriver: awslogs
             Options:
